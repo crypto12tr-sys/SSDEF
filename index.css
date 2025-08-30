@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark mode styles */
+.dark {
+  color-scheme: dark;
+}
+
+/* Dark mode backgrounds */
+.dark body {
+  background-color: #141414;
+}
+
+.dark .bg-white {
+  background-color: #221F11;
+}
+
+.dark .bg-gray-50 {
+  background-color: #141414;
+}
+
+.dark .bg-gray-100 {
+  background-color: #221F11;
+}
+
+/* Dark mode text colors */
+.dark .text-gray-900 {
+  color: #FFE285;
+}
+
+.dark .text-gray-800 {
+  color: #FFE285;
+}
+
+.dark .text-gray-700 {
+  color: #FFE285;
+}
+
+.dark .text-black {
+  color: #FFE285;
+}
+
+/* Dark mode borders */
+.dark .border-gray-300 {
+  border-color: #444;
+}
+
+.dark .border-gray-100 {
+  border-color: #333;
+}
+
+/* Dark mode hover states */
+.dark .hover\:bg-gray-50:hover {
+  background-color: #333;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: #333;
+}
+
+/* Dark mode cards and surfaces */
+.dark .shadow-sm,
+.dark .shadow-md,
+.dark .shadow-lg,
+.dark .shadow-xl,
+.dark .shadow-2xl {
+  box-shadow: 0 0 0 1px rgba(255, 226, 133, 0.1);
+}
+
+/* Glowing effects for the golden color */
+.glow-text {
+  text-shadow: 0 0 10px rgba(242, 187, 22, 0.5), 0 0 20px rgba(242, 187, 22, 0.3), 0 0 30px rgba(242, 187, 22, 0.1);
+}
+
+.glow-icon {
+  filter: drop-shadow(0 0 12px rgba(242, 187, 22, 0.6)) drop-shadow(0 0 24px rgba(242, 187, 22, 0.4)) drop-shadow(0 0 36px rgba(242, 187, 22, 0.2));
+  transition: filter 0.3s ease;
+}
+
+.glow-icon:hover {
+  filter: drop-shadow(0 0 16px rgba(242, 187, 22, 0.8)) drop-shadow(0 0 32px rgba(242, 187, 22, 0.6)) drop-shadow(0 0 48px rgba(242, 187, 22, 0.3));
+}
+
+.glow-button {
+  background: #F2BB16;
+  box-shadow: 0 0 20px rgba(242, 187, 22, 0.3), 0 4px 15px rgba(242, 187, 22, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 25px rgba(242, 187, 22, 0.5), 0 6px 20px rgba(242, 187, 22, 0.3);
+  transform: translateY(-2px);
+}
+
+.glow-button-large {
+  background: #F2BB16;
+  box-shadow: 0 0 30px rgba(242, 187, 22, 0.4), 0 8px 25px rgba(242, 187, 22, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glow-button-large:hover {
+  box-shadow: 0 0 40px rgba(242, 187, 22, 0.6), 0 12px 30px rgba(242, 187, 22, 0.4);
+}
+
+.glow-badge {
+  background: #F2BB16;
+  box-shadow: 0 0 15px rgba(242, 187, 22, 0.5);
+}
+
+.glow-dot {
+  box-shadow: 0 0 8px rgba(242, 187, 22, 0.6);
+}
+
+.glow-button-outline {
+  transition: all 0.3s ease;
+}
+
+.glow-button-outline:hover {
+  box-shadow: 0 0 20px rgba(242, 187, 22, 0.3), 0 4px 15px rgba(242, 187, 22, 0.2);
+}
+
+/* Glowing border effect */
+.glow-border {
+  box-shadow: 0 1px 0 0 rgba(242, 187, 22, 0.3), 
+              0 0 20px rgba(242, 187, 22, 0.1),
+              0 0 40px rgba(242, 187, 22, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-border:hover {
+  box-shadow: 0 1px 0 0 rgba(242, 187, 22, 0.5), 
+              0 0 30px rgba(242, 187, 22, 0.2),
+              0 0 60px rgba(242, 187, 22, 0.1);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F2BB16;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E6A914;
+}
+
+/* Animation for the beehive logo */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.1;
+    transform: scale(1.05);
+  }
+}
+
+/* Breathing glow animation that reaches far away */
+@keyframes breathing-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(242, 187, 22, 0.6));
+    transform: scale3d(1, 1, 1) translateZ(0);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(242, 187, 22, 0.8));
+    transform: scale3d(1.05, 1.05, 1) translateZ(0);
+  }
+}
+
+.animate-breathing-glow {
+  animation: breathing-glow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: transform, filter;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Hexagon wave animations */
+@keyframes wave-expand-fade {
+  0% {
+    transform: scale3d(0.8, 0.8, 1) translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale3d(2.5, 2.5, 1) translateZ(0);
+    opacity: 0;
+  }
+}
+
+.animate-wave-1 {
+  animation: wave-expand-fade 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 1s;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-wave-2 {
+  animation: wave-expand-fade 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 1.3s;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-wave-3 {
+  animation: wave-expand-fade 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 1.6s;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-wave-4 {
+  animation: wave-expand-fade 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 1.9s;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-wave-5 {
+  animation: wave-expand-fade 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 2.2s;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-wave-6 {
+  animation: wave-expand-fade 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 2.5s;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Hover effects for cards */
+.hover\:shadow-md:hover {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Focus states for accessibility */
+button:focus, 
+a:focus {
+  outline: 2px solid #F2BB16;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: loading 1.4s ease infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .glow-text {
+    text-shadow: 0 0 5px rgba(242, 187, 22, 0.4), 0 0 10px rgba(242, 187, 22, 0.2);
+  }
+  
+  .glow-button-large {
+    box-shadow: 0 0 20px rgba(242, 187, 22, 0.3), 0 4px 15px rgba(242, 187, 22, 0.2);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .glow-text,
+  .glow-icon,
+  .glow-button,
+  .glow-button-large,
+  .glow-badge,
+  .glow-dot {
+    filter: none;
+    box-shadow: none;
+    text-shadow: none;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-wave-1,
+  .animate-wave-2,
+  .animate-wave-3,
+  .animate-wave-4,
+  .animate-wave-5,
+  .animate-wave-6,
+  .transition-all,
+  .transition-colors,
+  .transition-transform,
+  .transition-shadow {
+    animation: none;
+    transition: none;
+  }
+}
